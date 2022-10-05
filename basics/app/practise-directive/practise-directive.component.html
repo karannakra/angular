@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p *ngIf="displayParagraph">Secret Password = tuna</p>
+      <button class="btn-primary" (click)="displayToggle()">
+        Display Details
+      </button>
+      <div *ngFor="let log of logs; let i = index">
+        <p
+          [ngStyle]="{ backgroundColor: i > 5 ? 'blue' : 'white' }"
+          [ngClass]="{ white: i > 5 }"
+        >
+          sr.{{ i }} {{ log }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

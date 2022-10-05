@@ -1,0 +1,11 @@
+<p betterHighlightDirective defaultColor="red" highlightColor="blue">
+  Style me with basic directive
+</p>
+<div *appUnless="displayContent">
+  This is the data where content will be shown
+</div>
+<button (click)="displayContent = !displayContent">Click me</button>
+<div [ngSwitch]="displayContent">
+  <p *ngSwitchCase="5">asdasd</p>
+  <p ngSwitchDefault="5">asdasd</p>
+</div>
